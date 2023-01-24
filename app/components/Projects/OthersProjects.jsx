@@ -151,7 +151,7 @@ export const OthersProjects = () => {
         {othersProjects.map((project) => (
           <div
             key={project.id}
-            className="border mt-5 rounded-lg  shadow-2xl shadow-[var(--nav-shadow)] p-5"
+            className="border mt-5 rounded-lg border-[var(--hover-nav)] shadow-2xl shadow-[var(--nav-shadow)] p-5"
           >
             <div className="flex justify-between items-center">
               <IconFolder className="w-14 h-14 text-[var(--bg-buttons)]" />

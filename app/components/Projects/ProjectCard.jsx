@@ -46,7 +46,7 @@ export const ProjectCard = () => {
       {projectsInfo.map((project) => (
         <div
           key={project.id}
-          className="flex flex-col items-center mt-10 justify-center border-2 rounded-lg shadow-lg md:flex-row-reverse md:border-none md:shadow-none md:relative md:h-96 "
+          className="flex flex-col items-center mt-10 justify-center border-2 rounded-lg shadow-lg md:flex-row-reverse md:border-none md:shadow-none md:relative md:h-96 border-[var(--hover-nav)] "
         >
           <Image
             src={`/images/project-${project.id}.webp`}
@@ -60,7 +60,7 @@ export const ProjectCard = () => {
             <h1 className="text-3xl font-bold text-center md:w-2/5 md:text-4xl md:text-start">
               {project.proyecto_title}
             </h1>
-            <p className="text-start p-4 md:bg-[var(--bg-buttons)] md:rounded-lg md:text-lg md:w-1/2 md:mt-3 text-white font-bold">
+            <p className="text-start p-4 md:bg-[var(--bg-buttons)] md:rounded-lg md:text-lg md:w-1/2 md:mt-3 font-bold md:text-white md:shadow-xl md:shadow-[var(--nav-shadow)]">
               {project.proyecto_description}
             </p>
             <ul className="flex flex-wrap gap-2 p-4 justify-start mt-3 md:justify-center md:w-2/5 md:mt-3">

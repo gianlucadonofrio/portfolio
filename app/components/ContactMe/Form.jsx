@@ -126,7 +126,7 @@ export const Form = () => {
 
       <div className="flex flex-col gap-2 justify-center items-end mt-2">
         <div
-          className="hidden text-center bg-green-600 w-full p-2 rounded-md"
+          className="hidden text-center bg-green-600 w-full p-2 rounded-md mb-6"
           role="alert"
           ref={alertSumbitMail}
         >
@@ -135,7 +135,7 @@ export const Form = () => {
           Te responderé lo antes posible.
         </div>
         <div
-          className="hidden text-center bg-red-500 w-full p-2 rounded-md"
+          className="hidden text-center bg-red-500 w-full p-2 rounded-md mb-6"
           role="alert"
           ref={alertErrorMail}
         >

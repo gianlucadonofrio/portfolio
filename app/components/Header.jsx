@@ -112,6 +112,7 @@ export const Header = () => {
                   <a
                     href={link.href}
                     className="py-2 pl-3 text-bold  hover:bg-[var(--hover-nav)] w-full"
+                    key={link.id}
                     onClick={() => {
                       toggleMenu();
                     }}
@@ -130,6 +131,7 @@ export const Header = () => {
               return (
                 <a
                   href={link.href}
+                  key={link.id}
                   className="h-full flex text-lg items-center p-2 hover:bg-[var(--hover-nav)] text-[var(--text-nav)] hover:text-[var(--foreground)]"
                 >
                   <li key={link.id}>{link.text}</li>
