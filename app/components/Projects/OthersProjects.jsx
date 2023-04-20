@@ -164,14 +164,16 @@ export const OthersProjects = () => {
                 >
                   <IconBrandGithub className="h-10 w-10 text-[var(--text-secondary)] hover:scale-125 hover:text-[var(--bg-buttons)] cursor-pointer" />
                 </a>
-                <a
-                  href={project.proyecto_url_web}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label="web"
-                >
-                  <IconWorld className="h-10 w-10 text-[var(--text-secondary)] hover:scale-125 hover:text-[var(--bg-buttons)] cursor-pointer" />
-                </a>
+                {project.proyecto_url_web && (
+                  <a
+                    href={project.proyecto_url_web}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="web"
+                  >
+                    <IconWorld className="h-10 w-10 text-[var(--text-secondary)] hover:scale-125 hover:text-[var(--bg-buttons)] cursor-pointer" />
+                  </a>
+                ) }
               </div>
             </div>
             <h1 className="text-3xl font-bold mt-4 text-center">

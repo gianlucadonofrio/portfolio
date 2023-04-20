@@ -4,11 +4,27 @@ import Image from "next/image";
 const projectsInfo = [
   {
     id: 1,
+    proyecto_title: "Marvel Comics App",
+    proyecto_description:
+      "Permite ver y comprar los comics de Marvel, tambien permite ver los detalles de cada comic y los personajes que aparecen en cada uno de ellos, además de ver el detalle de cada personaje y los comics en los que aparece.",
+    proyecto_url_github:
+      "https://github.com/gianlucadonofrio/ctd-esp-fe3-final",
+    proyecto_url_web: "https://ctd-esp-fe3-final-beta.vercel.app/",
+    proyecto_tecnologias: [
+      "NextJS",
+      "TypeScript",
+      "Material UI",
+      "React Hook Form",
+      "Jest",
+    ],
+  },
+  {
+    id: 2,
     proyecto_title: "The Simpsons App",
     proyecto_description:
       "Permite buscar citas de los personajes de la serie, también permite ver los detalles de cada personaje de la familia Simpson y ver algunas noticias relacionadas a la serie.",
     proyecto_url_github:
-      "https://github.com/gianlucadonofrio/ctd-esp-front/tree/main/ctd-esp-fe2-final",
+      "https://github.com/gianlucadonofrio/ctd-esp-fe2-final",
     proyecto_url_web: "https://the-simpson-app.vercel.app/",
     proyecto_tecnologias: [
       "ReactJS",
@@ -19,17 +35,17 @@ const projectsInfo = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     proyecto_title: "Rick and Morty App",
     proyecto_description:
       "Permite buscar personajes de la serie, ver sus detalles y ver episodios relacionados a cada personaje, además de poder agregarlos a favoritos.",
     proyecto_url_github:
-      "https://github.com/gianlucadonofrio/ctd-esp-front/tree/main/ctd-esp-fe1-final",
+      "https://github.com/gianlucadonofrio/ctd-esp-fe1-final",
     proyecto_url_web: "https://rick-and-morty-taupe-two.vercel.app/",
     proyecto_tecnologias: ["ReactJS", "Redux", "TypeScript", "JSDoc"],
   },
   {
-    id: 3,
+    id: 4,
     proyecto_title: "Github Issues",
     proyecto_description:
       "Permite seguir el estado de los issues de un repositorio de Github, además de poder filtrarlos por estado. Se utilizó React Query para manejar el estado de la aplicación. ",
@@ -97,3 +113,4 @@ export const ProjectCard = () => {
     </section>
   );
 };
+export default ProjectCard;
