@@ -31,9 +31,7 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favicon.ico" />
         <title>Gianluca D'Onofrio 👨🏼‍💻</title>
       </head>
-      <body>
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

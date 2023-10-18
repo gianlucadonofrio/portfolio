@@ -25,10 +25,7 @@ export const ButtonToTop = () => {
         document.documentElement.scrollTop = 0;
       }}
       ref={buttonScrollTop}
-      className="hidden fixed animate-bounce right-5 bottom-5 z-10 rounded-full p-2 text-white hover:scale-125 transition-all duration-300 "
-      style={{
-        background: "linear-gradient(-45deg,#ee7752,#e73c7e,#23a6d5, #23d5ab)",
-      }}
+      className="hidden fixed  right-5 bottom-5 z-10 rounded-full p-2 text-white hover:scale-125 transition-all duration-300 ease-in-out bg-[var(--bg-buttons)]"
     >
       <IconChevronUp />
     </button>

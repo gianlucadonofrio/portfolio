@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "./stars.css";
 
 :root {
   --mw-document: 1200px;
@@ -15,9 +16,9 @@
 
   /*   Buttons and Icon Styles*/
   --bg-buttons: #604a84;
+  --bg-hover: hsla(0, 0%, 100%, 0.18);
   --text-buttons: #f8faff;
   --socials-buttons: #a8acb3;
-  --stars: #e8eaed;
 }
 
 [data-theme="light"] {
@@ -30,7 +31,7 @@
   --text-secondary: #5f6368;
   --nav-shadow: #d5d6d8;
   --socials-buttons: #57606a;
-  --stars: #3a3c3c;
+  --bg-hover: hsla(0, 0%, 0%, 0.08);
 }
 
 * {
@@ -52,6 +53,8 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   width: 100%;
+  background-size: 400% 400%;
+  background-attachment: fixed;
 }
 
 a {
@@ -88,4 +91,10 @@ a {
   :root {
     --mw-document: 100%;
   }
+}
+
+.odd-project{
+  display: flex;
+
+  flex-direction: column
 }

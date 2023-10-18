@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import { IconSend, IconArrowBarToDown } from "@tabler/icons";
+import { IconSend, IconArrowBarToDown, IconFlare } from "@tabler/icons";
 import { SocialsIcons } from "./SocialsIcons";
+
 export const PanelHero = () => {
   const [scroll, setScroll] = useState(0);
 
@@ -48,7 +49,7 @@ export const PanelHero = () => {
           </a>
         </div>
         <div className="flex flex-col items-center justify-center relative">
-          <p className="text-xl  md:text-2xl font-semibold">Hola 👋🏼, soy</p>
+          <p className="text-xl md:text-2xl font-semibold">Hola 👋🏼, soy</p>
           <h1
             className="text-6xl md:text-9xl font-bold flex flex-col items-center animate-gradient"
             style={{
@@ -65,6 +66,7 @@ export const PanelHero = () => {
           <p className="text-xl p-3 text-center md:text-2xl font-semibold">
             Software Developer.
           </p>
+          <IconFlare className="absolute top-0 right-0 w-20 h-20 text-[var(--socials-buttons)] " />
         </div>
       </div>
     </section>

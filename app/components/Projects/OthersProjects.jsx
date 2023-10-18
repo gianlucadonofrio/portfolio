@@ -144,14 +144,14 @@ const othersProjects = [
 export const OthersProjects = () => {
   return (
     <section>
-      <div className="w-full flex flex-col justify-center items-center mt-8">
+      <div className="w-full flex flex-col justify-center items-center mt-8 ">
         <h1 className="text-4xl font-bold">Otros proyectos interesantes</h1>
       </div>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3 bg">
         {othersProjects.map((project) => (
           <div
             key={project.id}
-            className="border mt-5 rounded-lg border-[var(--hover-nav)] shadow-2xl shadow-[var(--nav-shadow)] p-5"
+            className="border mt-5 rounded-lg border-[var(--hover-nav)] shadow-2xl shadow-[var(--nav-shadow)] p-5 hover:backdrop-filter backdrop-blur-lg hover:bg-[var(--bg-hover)] hover:bg-opacity-10 transition-all ease-in-out hover:border-[var(--bg-hover)] cursor-pointer"
           >
             <div className="flex justify-between items-center">
               <IconFolder className="w-14 h-14 text-[var(--bg-buttons)]" />

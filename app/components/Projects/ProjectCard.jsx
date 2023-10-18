@@ -58,28 +58,50 @@ const projectsInfo = [
 
 export const ProjectCard = () => {
   return (
-    <section>
-      {projectsInfo.map((project) => (
+    <section id="projects">
+      {projectsInfo.map((project, index) => (
         <div
           key={project.id}
-          className="flex flex-col items-center mt-10 justify-center border-2 rounded-lg shadow-lg md:flex-row-reverse md:border-none md:shadow-none md:relative md:h-96 border-[var(--hover-nav)] "
+          className="flex flex-col items-center mt-10 justify-center border-2 rounded-lg shadow-lg md:flex-row md:border-none md:shadow-none md:relative md:h-96"
         >
           <Image
             src={`/images/project-${project.id}.webp`}
             alt={project.proyecto_title}
-            className="rounded-t md:w-3/5 w-auto md:h-96 object-cover md:absolute md:right-0 md:rounded"
+            className={`rounded-t md:w-3/5 w-auto md:h-96 object-cover md:absolute md:${
+              index % 2 === 0 ? "right-0" : "left-0"
+            }  md:rounded`}
             priority
             width={1000}
             height={1000}
           />
-          <div className="flex flex-col items-center mt-2 md:absolute md:left-0 md:w-full md:items-start last:border-red-500 ">
-            <h1 className="text-3xl font-bold text-center md:w-2/5 md:text-4xl md:text-start">
+          <div
+            className={`flex flex-col items-center mt-2 md:absolute md:left-0 md:w-full ${
+              index % 2 === 0
+                ? "md:items-start md:text-start"
+                : "md:items-end md:text-end"
+            } last:border-red-500`}
+          >
+            <h1
+              className={`text-3xl font-bold text-start md:w-2/5 md:text-4xl ${
+                index % 2 === 0 ? "md:text-start" : "md:text-end"
+              } 
+            `}
+            >
               {project.proyecto_title}
             </h1>
-            <p className="text-start p-4 md:bg-[var(--bg-buttons)] md:rounded-lg md:text-lg md:w-1/2 md:mt-3 font-bold md:text-white md:shadow-xl md:shadow-[var(--nav-shadow)]">
+            <p
+              className={`p-4 md:bg-[var(--bg-buttons)] md:rounded-lg md:text-lg md:w-1/2 md:mt-3 font-bold md:text-white md:shadow-xl md:shadow-[var(--nav-shadow)] 
+             ${index % 2 === 0 ? "md:text-start" : "md:text-end"} 
+            
+            `}
+            >
               {project.proyecto_description}
             </p>
-            <ul className="flex flex-wrap gap-2 p-4 justify-start mt-3 md:justify-center md:w-2/5 md:mt-3">
+            <ul
+              className={`flex flex-wrap gap-2 pt-4 mt-3 md:w-2/5 md:mt-3
+            ${index % 2 === 0 ? "justify-start" : "justify-end"}
+            `}
+            >
               {project.proyecto_tecnologias.map((tecnologia) => (
                 <li
                   key={tecnologia}
@@ -89,7 +111,15 @@ export const ProjectCard = () => {
                 </li>
               ))}
             </ul>
-            <div className="flex justify-center gap-5 md:justify-end md:w-2/5 md:mt-3 md:pr-5 mb-5 md:mb-0">
+            <div
+              className={`flex justify-center gap-5 pt-4  md:w-2/5  mb-5 md:mb-0
+            ${
+              index % 2 === 0
+                ? "md:justify-start md:pr-5"
+                : "md:justify-end md:pl-5"
+            }
+            `}
+            >
               <a
                 href={project.proyecto_url_github}
                 target="_blank"

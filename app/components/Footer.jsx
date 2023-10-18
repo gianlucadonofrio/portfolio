@@ -2,8 +2,8 @@ import { SocialsIcons } from "./SocialsIcons";
 
 export const Footer = () => {
   return (
-    <section className="w-full">
-      <div className="border-b-2" />
+    <section className="u-center w-full">
+      <div className="border-t-2 border-[var(--bg-hover)] " />
       <div className="u-center">
         <div className="flex flex-col items-center">
           <p className="text-4xl mt-10 font-bold">

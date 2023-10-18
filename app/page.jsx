@@ -20,6 +20,11 @@ export default function HomePage() {
       <ContactMeLayout />
       <Footer />
       <ButtonToTop />
+      <section className="stars_container">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+      </section>
     </ThemeProvider>
   );
 }
