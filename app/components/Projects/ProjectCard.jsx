@@ -100,7 +100,7 @@ export const ProjectCard = () => {
             </p>
             <ul
               className={`flex flex-wrap gap-2 mt-3 md:w-2/5 md:mt-3 justify-center p-2
-            ${index % 2 === 0 ? "justify-start" : "justify-end"}
+            ${index % 2 === 0 ? "md:justify-start md:pl-0" : "md:justify-end md:pr-0"}
             `}
             >
               {project.proyecto_tecnologias.map((tecnologia) => (
