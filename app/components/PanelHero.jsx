@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { IconSend, IconArrowBarToDown, IconFlare } from "@tabler/icons";
+import { IconSend, IconArrowBarToDown } from "@tabler/icons";
 import { SocialsIcons } from "./SocialsIcons";
 
 export const PanelHero = () => {
@@ -66,7 +66,6 @@ export const PanelHero = () => {
           <p className="text-xl p-3 text-center md:text-2xl font-semibold">
             Software Developer.
           </p>
-          <IconFlare className="absolute top-0 right-0 w-20 h-20 text-[var(--socials-buttons)] " />
         </div>
       </div>
     </section>

@@ -93,8 +93,21 @@ a {
   }
 }
 
-.odd-project{
+.odd-project {
   display: flex;
 
-  flex-direction: column
+  flex-direction: column;
+}
+.vertical-timeline::before {
+  background-color: var(--socials-buttons) !important;
+  border-radius: 10px;
+}
+.vertical-timeline-element-icon {
+  box-shadow: unset !important;
+}
+.vertical-timeline-element-content:hover {
+  background-color: var(--hover-nav) !important;
+  cursor: pointer;
+  backdrop-filter: blur(1px);
+  opacity: 0.8;
 }

@@ -62,13 +62,14 @@ export const ProjectCard = () => {
       {projectsInfo.map((project, index) => (
         <div
           key={project.id}
-          className="flex flex-col items-center mt-10 justify-center border-2 rounded-lg shadow-lg md:flex-row md:border-none md:shadow-none md:relative md:h-96"
+          className="flex flex-col items-center mt-10 justify-center border-2 border-[var(--bg-hover)]
+          rounded-lg shadow-lg md:flex-row md:border-none md:shadow-none md:relative md:h-96"
         >
           <Image
             src={`/images/project-${project.id}.webp`}
             alt={project.proyecto_title}
-            className={`rounded-t md:w-3/5 w-auto md:h-96 object-cover md:absolute md:${
-              index % 2 === 0 ? "right-0" : "left-0"
+            className={`rounded-t md:w-3/5 w-auto object-cover md:absolute ${
+              index % 2 === 0 ? "md:right-0" : "md:left-0"
             }  md:rounded`}
             priority
             width={1000}
@@ -98,7 +99,7 @@ export const ProjectCard = () => {
               {project.proyecto_description}
             </p>
             <ul
-              className={`flex flex-wrap gap-2 pt-4 mt-3 md:w-2/5 md:mt-3
+              className={`flex flex-wrap gap-2 mt-3 md:w-2/5 md:mt-3 justify-center p-2
             ${index % 2 === 0 ? "justify-start" : "justify-end"}
             `}
             >

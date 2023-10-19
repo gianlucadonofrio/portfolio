@@ -42,7 +42,7 @@ export const AboutMe = () => {
               Educación y trabajo
             </span>
           </div>
-          <div className="flex flex-wrap  items-center justify-center mt-10 gap-5">
+          <div className="flex flex-wrap  items-center justify-center mt-10 mb-10 gap-5">
           <button
               onClick={() => {
                 setShowEducation(false);

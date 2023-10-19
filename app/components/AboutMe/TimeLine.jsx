@@ -1,4 +1,9 @@
-import { IconCalendar } from "@tabler/icons";
+import {  IconSchool, IconBriefcase } from "@tabler/icons";
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css";
 
 const educationHistory = [
   {
@@ -32,23 +37,32 @@ const workHistory = [
 
 export const TimeLine = ({ showEducation }) => {
   return (
-    <section className="flex flex-col w-full max-w-xl mx-auto">
-      <ol className="items-center sm:flex flex-col md:flex-col mt-10  w-full">
-        {(showEducation ? educationHistory : workHistory).map((item) => (
-          <li
-            className="relative mb-6 sm:mb-0 w-full flex flex-col justify-center items-center"
-            key={item.id}
-          >
-            <div className="mt-3 sm:pr-8 w-full rounded-lg  p-5 hover:backdrop-filter backdrop-blur-lg hover:bg-[var(--bg-hover)] hover:bg-opacity-10 transition-all ease-in-out hover:border-[var(--bg-hover)] border-[var(--bg-hover)] border-2 cursor-pointer">
-              <time className="flex mb-2 text-xs font-normal leading-none text-[var(--text-secondary)] items-center gap-2">
-                <IconCalendar /> {item.date}
-              </time>
-              <h1 className="text-xl font-bold leading-none"> {item.title}</h1>
-              <p className="text-sm mt-1">{item.text}</p>
-            </div>
-          </li>
-        ))}
-      </ol>
-    </section>
+    <VerticalTimeline>
+      {(showEducation ? educationHistory : workHistory).map((item) => (
+        <VerticalTimelineElement
+          key={item.id}
+          date={item.date}
+          iconStyle={{
+            background: "var(--bg-buttons)",
+            color: "#fff",
+            border: "none"
+           }}
+          icon={showEducation ? <IconSchool /> : <IconBriefcase />}
+          contentStyle={{
+            background: "transparent",
+            color: "var(--foreground)",
+            border: "1px solid var(--socials-buttons)",
+            boxShadow: "unset"
+          }}
+          contentArrowStyle={{
+            borderRight: "7px solid  var(--socials-buttons)",
+          }}
+           
+        >
+          <h3 className="vertical-timeline-element-title">{item.title}</h3>
+          <p>{item.text}</p>
+        </VerticalTimelineElement>
+      ))}
+    </VerticalTimeline>
   );
 };
